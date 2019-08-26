@@ -1,0 +1,210 @@
+
+
+
+Rushit Patel - QA Tester
+
+https://www.rushitpatel.com
+
+rushitpatel1123@gmail.com
+
+https://www.linkedin.com/in/rushitpatel23/
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+						ANT- software tool for automating software build processes
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Running Multiple Tests Together In Batch 
+
+
+
+1) TestNG XML File
+
+2) ANT
+
+	Can Compile Entrie Code, Batch execution, Can Generate Reports with Plug-ins
+
+
+
+
+
+
+
+
+
+ANT SETUP 
+
+
+Google : ANT Download
+
+https://ant.apache.org/bindownload.cgi
+
+Download The  .Zip Version
+
+UnZip It And put it into C drive  
+
+
+Set The System Environment Path Pointing to the ANT 
+
+
+This PC > RC > Properties > Advanced System Settings > Environment Variables >
+
+
+
+
+
+1) 
+
+ANT > Home Page Path  > C:\apache-ant-1.9.14
+
+Create a System Variable
+
+Name :ANT_Home
+
+Value : C:\apache-ant-1.9.14
+
+
+
+
+
+2) Point Bin Folder Of ANT 
+
+bin : C:\apache-ant-1.9.14\bin
+
+Path into System Variables  :  Paste  The Bin Path   C:\apache-ant-1.9.14\bin
+
+
+
+
+
+
+
+
+
+
+Verify That System Is Pointing to ANT Or Not >  Command Prompt C:\ - ant 			(Will Show That : Build Failed)
+
+		
+
+
+
+
+
+		
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								Build.Xml
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Build.xml is Heart of ANT
+
+Place All the jars into Seprate Locatin and Provide the Path
+
+You Dont Need TO Understand The Build.XMl File Just provide References To The Path
+
+
+
+BUILD.XML
+---------------------
+
+This File is independent of the Eclipse
+
+
+
+Download the selenium server standalone jar and testng jar 
+
+Create a jars folder into C drive  and put selenium-server-standalone jar and testng jar into it
+
+Put the Build.xml file at the project level (Without Writing it into folder  level)
+
+
+
+
+
+
+
+
+Make   Changes   At  This   Place Into Build .xml File :
+------------------------------------------------------------------------
+
+3 Changes Only Required   Make  Changes  as Per  The project and names  of your file
+
+Provide The path to jars
+
+Change the Project Name:
+
+Compile  Change The Project Name
+
+Run   TestNG.xml file
+
+
+
+<project name="ANT" default="usage" basedir=".">        <!--  ========CHANGE=== -->
+
+<property name="ws.jars" value="C:\jars"/>		<!--  ========CHANGE=== -->
+
+<xmlfileset dir="${ws.home}" includes="testng5.xml"/>   			<!--  ========CHANGE=== -->
+
+
+---------------------------------------------------------------------------------------
+
+
+
+You Can  Run The Tests at The Package and Test Level make   Required  Changes into testng.xml file
+
+
+
+
+
+
+
+Running and  Compiling tests into Command Prompt:
+-----------------------------------------------------------------------------
+
+To  run the file you will have to go at the build.xml level  then  execute the run command
+
+C:\Users\RUSHIT  PATEL\eclipse-workspace\ANT
+
+ant compile
+
+ant run
+
+
+ant clean   (Cleans The Temporary  files )  useful  for Good Practice 
+
+
+
+
+Create bat file for  Single Click Run  :
+
+Running  all  the commands without using Command prompt :   "projecttrigger.bat"  at  the project level
+
+Notepad   : Craete the file and write 
+
+ ant clean compile run  and   give the file name  "projecttrigger.bat"  and save it into  project level where  your  project is located
+
+Double click on projecttrigger.bat  will  Automatically Run The File  with  the  Single Click
+
+
+Commands:
+------------------
+
+ant compile
+
+ant run
+
+ant clean   
+
+
+ant clean compile run
+
+
+
+
+
+
+
+
+
